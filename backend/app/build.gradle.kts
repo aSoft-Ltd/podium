@@ -32,7 +32,7 @@ kotlin {
 
 //dockate {
 //    val username = "andylamax"
-//    val token = "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"
+//    val token = "<github-token>"
 //    image(environments, "frontend-monitor") {
 //        val build = build(NODE_18_19_0_ALPINE_3_18)
 //        run("apk update", "apk upgrade", "apk add git")
@@ -63,7 +63,7 @@ kotlin {
 //        val build = build(NODE_18_19_0_ALPINE_3_18)
 //        run("apk update", "apk upgrade", "apk add git")
 //        workdir("/app")
-//        run("git clone https://andylamax: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@github.com/picortex/pimono")
+//        run("git clone https://$username:$token@github.com/picortex/pimono")
 //        workdir("/app/pimono")
 //        run("git checkout dev", "yarn prepare", "yarn update")
 //        workdir("/app/pimono/apps/picapital-web")
@@ -119,12 +119,6 @@ kotlin {
 //
 //            mail(sender = "bus")
 //            mail(sender = "console")
-//            if (it.name != Environment.testing.name) mail(
-//                sender = "smtp",
-//                host = "smtp.sendgrid.net",
-//                user = "apikey",
-//                password = "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"
-//            )
 //
 //            verification(
 //                name = it.label(),
